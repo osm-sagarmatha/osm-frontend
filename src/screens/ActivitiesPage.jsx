@@ -9,6 +9,15 @@ import {
   faPersonFalling,
 } from "@fortawesome/free-solid-svg-icons";
 
+import ActivityCheckbox from "../components/Activity/ActivityCheckbox";
+
+const reducer = (state, action) => {
+  return {
+    ...state,
+    [`checked${action.id}`]: state[`checked${action.id}`],
+  };
+};
+
 const ActivitiesPage = () => {
   const [checked1, setChecked1] = useState(false);
   const [checked2, setChecked2] = useState(false);
@@ -16,6 +25,7 @@ const ActivitiesPage = () => {
   const [checked4, setChecked4] = useState(false);
   const [checked5, setChecked5] = useState(false);
   const [checked6, setChecked6] = useState(false);
+
   return (
     <div className="md:py-5 flex flex-col mx-auto items-center md:bg-white rounded-lg md:w-96">
       <h1 className="text-2xl p-12 text-green-500  font-bold  ">
@@ -24,7 +34,13 @@ const ActivitiesPage = () => {
         what activities are you involved in?
       </h1>
       <div className="card flex flex-wrap items-center justify-center -mt-3 ">
-        <div
+        <ActivityCheckbox
+          checked={checked1}
+          onClick={() => setChecked1(!checked1)}
+          name="Cycling"
+          icon={faPersonBiking}
+        />
+        {/* <div
           onClick={() => setChecked1(!checked1)}
           className="group  w-32 h-28 p-8 border-2 rounded-lg relative hover:bg-green-500  border-gray flex flex-col mb-5 items-center justify-center"
         >
@@ -42,7 +58,7 @@ const ActivitiesPage = () => {
           <h3 className="text-sm mt-1 absolute bottom-2 text-green-500 group-hover:text-white">
             Cycling
           </h3>
-        </div>
+        </div> */}
         <div
           onClick={() => setChecked2(!checked2)}
           className=" group w-32 h-28 p-8 border-2 rounded-lg relative hover:bg-green-500  border-gray flex flex-col mb-5 items-center justify-center  "

@@ -7,10 +7,13 @@ import {
   faClockRotateLeft,
   faUserGroup,
   faGreaterThan,
+  faBell,
+  faGear,
 } from "@fortawesome/free-solid-svg-icons";
+import { BsShieldFillCheck } from "react-icons/bs";
 const Profile = () => {
   return (
-    <div className="md:py-5 py-10 px-5 mx-auto flex flex-col">
+    <div className="md:py-5 py-10 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex justify-center items-center">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
         <h1 className="text-2xl py-8 px-4 text-green-500  font-bold text-left ">
@@ -55,11 +58,7 @@ const Profile = () => {
               className="text-green-500"
             />
             <h2 className="px-3 py-5 w-full">Personal Data</h2>
-            <FontAwesomeIcon
-              icon={faGreaterThan}
-              className="text-gray-400"
-              size={24}
-            />
+            <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
           <div className="flex justify-center items-center">
             <FontAwesomeIcon
@@ -68,11 +67,7 @@ const Profile = () => {
               className="text-green-500"
             />
             <h2 className="px-3 py-5 w-full">Achievements</h2>
-            <FontAwesomeIcon
-              icon={faGreaterThan}
-              className="text-gray-400"
-              size={24}
-            />
+            <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
           <div className="flex justify-center items-center">
             <FontAwesomeIcon
@@ -81,11 +76,7 @@ const Profile = () => {
               className="text-green-500"
             />
             <h2 className="px-3 py-5 w-full ">History</h2>
-            <FontAwesomeIcon
-              icon={faGreaterThan}
-              className="text-gray-400"
-              size={24}
-            />
+            <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
           <div className="flex justify-center items-center">
             <FontAwesomeIcon
@@ -94,29 +85,58 @@ const Profile = () => {
               className="text-green-500"
             />
             <h2 className="px-3 py-5 w-full">Friends</h2>
-            <FontAwesomeIcon
-              icon={faGreaterThan}
-              className="text-gray-400"
-              size={24}
-            />
+            <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
         </div>
       </div>
       <div className="flex flex-col mx-auto mt-3">
         <div className="block p-6 w-80 bg-white rounded-lg border border-gray-200 shadow-md  ">
-          <h5 className="mb-2 text-2xl font-bold tracking-tight ">Account</h5>
-          <div className="flex justify-center items-center">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight ">
+            Notification
+          </h5>
+          <div className="flex justify-center items-center ">
             <FontAwesomeIcon
-              icon={faUser}
+              icon={faBell}
               fontSize={20}
               className="text-green-500"
             />
-            <h2 className="px-3 py-5 w-full">Personal Data</h2>
+            <div className=" ml-3 text-sm font-medium w-full text-left ">
+              Pop up Notifications
+            </div>
+            <label
+              htmlFor="default-toggle"
+              className="inline-flex relative items-center cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                value=""
+                id="default-toggle"
+                className="sr-only peer"
+              />
+
+              <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none   dark:peer-focus:ring-green-500 rounded-full peer  peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-green-500"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col mx-auto mt-3 h-80">
+        <div className="block p-6 w-80 bg-white rounded-lg border border-gray-200 shadow-md  ">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight ">Other</h5>
+          <div className="flex justify-center items-center mb-3">
+            <BsShieldFillCheck fontSize={23} className="text-green-500" />
+            <div className=" ml-3 text-sm font-medium w-full text-left ">
+              Privacy
+            </div>
+          </div>
+          <div className="flex justify-center items-center mb-3 ">
             <FontAwesomeIcon
-              icon={faGreaterThan}
-              className="text-gray-400"
-              size={24}
+              icon={faGear}
+              fontSize={20}
+              className="text-green-500"
             />
+            <div className=" ml-3 text-sm font-medium w-full text-left ">
+              Settings
+            </div>
           </div>
         </div>
       </div>

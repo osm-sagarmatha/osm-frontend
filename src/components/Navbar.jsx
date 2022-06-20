@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { GiFootTrip } from "react-icons/gi";
+import { GiRunningNinja } from "react-icons/gi";
 import {
   faBars,
   faXmark,
@@ -132,7 +132,10 @@ const Navbar = () => {
         </nav>
       </div>
       <div className="flex absolute right-5 top-4 z-50">
-        <GiFootTrip fontSize={30} className="text-orange-500 font-bold " />
+        <GiRunningNinja
+          fontSize={30}
+          className="text-orange-500 mr-2 font-bold "
+        />
         <h2 className="text-orange-500 font-bold  ">6969</h2>
       </div>
     </div>
