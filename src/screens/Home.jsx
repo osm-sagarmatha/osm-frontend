@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Hero from "../images/Hero.png";
 export const Home = () => {
   return (
-    <div className="md:py-5 flex flex-col mx-auto justify-center  items-center md:bg-white rounded-lg md:w-96">
+    <div className="md:py-5 flex flex-col mx-auto justify-center   items-center md:bg-white rounded-lg md:w-96">
       <img
         src={Hero}
         className="md:w-96 w-11/12 object-contain h-1/2 md:h-full"
