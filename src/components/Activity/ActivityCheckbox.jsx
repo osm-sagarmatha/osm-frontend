@@ -4,7 +4,7 @@ const ActivityCheckbox = ({ checked, onClick, name, icon }) => {
   return (
     <div
       onClick={onClick}
-      className="group w-32 h-28 p-8 border-2 rounded-lg relative hover:bg-green-500  border-gray flex flex-col mb-5 items-center justify-center  "
+      className="group mx-1 w-32 h-28 p-8 border-2 rounded-lg relative hover:bg-green-500  border-gray flex flex-col mb-5 items-center justify-center  "
     >
       <input
         type="checkbox"

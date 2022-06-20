@@ -61,7 +61,7 @@ const NavigationBar = () => {
                 color: isActive ? "green" : "",
               };
             }}
-            className="w-full  hover:text-green-500 justify-center  text-center pt-3 pb-3"
+            className="w-full  hover:text-green-500 justify-center text-center pt-3 pb-3"
           >
             <FontAwesomeIcon
               icon={faComments}
