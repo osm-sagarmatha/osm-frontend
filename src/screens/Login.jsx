@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { useAuth } from "../contexts/auth";
+import { useAuthAction } from "../contexts/auth";
 
-import login from "../images/LoginHero.png";
+import loginImage from "../images/LoginHero.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
@@ -12,16 +12,17 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
 
-  const { login } = useAuth();
+  const { login } = useAuthAction();
 
-  const onSubmit = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
     login({ email, password });
   };
 
   return (
     <div className="md:py-5 flex flex-col mx-auto items-center md:bg-white rounded-lg md:w-96">
       <img
-        src={login}
+        src={loginImage}
         className="md:w-96 w-11/12 relative bottom-4 md:bottom-0 object-contain h-1/2 md:h-full"
         alt="Home"
       />

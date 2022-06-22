@@ -14,9 +14,11 @@ import Profile from "./screens/Profile";
 import MainScreen from "./screens/MainScreen";
 import Explore from "./screens/Explore";
 
-import { AuthProvider } from "./contexts/auth";
+import { AuthProvider, useAuthState } from "./contexts/auth";
 
 function App() {
+  const { user } = useAuthState();
+
   return (
     <AuthProvider>
       <div className="App  ">

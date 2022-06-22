@@ -5,7 +5,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 
 import signup from "../images/SignUpHero.png";
 
-import { useAuth } from "../contexts/auth";
+import { useAuthAction } from "../contexts/auth";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -19,15 +19,11 @@ const Signup = () => {
   const [sex, setSex] = useState("");
   const [weight, setWeight] = useState(0);
 
-  const { register } = useAuth();
-
-  const navigate = useNavigate();
+  const { register } = useAuthAction();
 
   const onSubmit = (e) => {
     e.preventDefault();
-    register({ name, email, password, age, weight, sex }).then(() =>
-      navigate("/")
-    );
+    register({ name, email, password, age, weight, sex });
   };
 
   return (
