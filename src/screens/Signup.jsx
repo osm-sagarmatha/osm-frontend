@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
@@ -10,7 +10,7 @@ import { useAuthAction } from "../contexts/auth";
 const reducer = (state, action) => {
   return {
     ...state,
-    [action.name]: [action.value],
+    [action.name]: action.value,
   };
 };
 
@@ -31,9 +31,8 @@ const Signup = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // const { name, email, password, age, weight, sex } = state;
-    // register({ name, email, password, age, weight, sex });
-    register(state);
+    const { name, email, password, age, weight, sex } = state;
+    register({ name, email, password, age, weight, sex });
   };
 
   return (

@@ -33,6 +33,7 @@ import Openrouteservice from "openrouteservice-js";
       // Import JS from https://github.com/GIScience/openrouteservice-js
       let orsDirections = new Openrouteservice.Directions({
         api_key: this._apiKey,
+        host: "http://localhost:9000/http://localhost:8080/ors",
       });
 
       // Change the coordenades from LatLng to LngLat and save it on the object
