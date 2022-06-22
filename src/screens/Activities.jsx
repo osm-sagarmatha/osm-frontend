@@ -1,30 +1,65 @@
 import React from "react";
 
 import Card from "../components/Card";
-import group1 from "../images/Group 9.png";
-import group2 from "../images/Group 10.png";
-import group3 from "../images/Group 11.png";
-import group4 from "../images/Group 12.png";
-import group5 from "../images/Group 13.png";
-import group6 from "../images/Group 14.png";
-import NavigationBar from "../components/NavigationBar";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPersonBiking,
+  faPersonRunning,
+  faHiking,
+  faPersonSwimming,
+  faPersonSkiingNordic,
+  faPersonFalling,
+  faBicycle,
+  faRunning,
+} from "@fortawesome/free-solid-svg-icons";
+import chart from "../images/chart.png";
+import map from "../images/Map.png";
+import route from "../images/route.png";
+import equip from "../images/equip.png";
+import fav from "../images/fav.png";
 const Activities = () => {
   return (
     <div className="md:py-5 flex flex-col mx-auto items-left md:bg-white rounded-lg md:w-96">
-      <h1 className="text-2xl p-12 text-green-500  font-bold text-left ">
+      <h1 className="text-2xl px-12 py-8 text-blue-500  font-bold text-left ">
         {" "}
-        I want to
+        Gaurav's Activity
       </h1>
-      <div className="card flex flex-wrap items-center justify-center -mt-3 ">
-        <Card img={group1} />
-        <Card img={group2} />
-        <Card img={group3} />
-        <Card img={group4} />
-        <Card img={group5} />
-        <Card img={group6} />
+      <img src={chart} className="w-72 mx-auto" alt="" />
+      <div className="activites">
+        <h1 className="font-bold text-2xl px-8 py-8"> Activities</h1>
+        <div className="card flex  items-center justify-evenly -mt-3 ">
+          <div className="flex flex-col items-center">
+            <Card icon={faPersonBiking} size={30} />
+            <h1>Cycling</h1>
+          </div>
+          <div className="flex flex-col items-center">
+            <Card icon={faHiking} size={30} />
+            <h1>Hiking</h1>
+          </div>
+          <div className="flex flex-col items-center">
+            <Card icon={faRunning} size={30} />
+            <h1>Jogging</h1>
+          </div>
+          <div className="flex flex-col items-center">
+            <Card icon={faPersonFalling} size={30} />
+            <h1>Exercise</h1>
+          </div>
+        </div>
       </div>
-      <NavigationBar />
+      <div className="servies flex flex-wrap justify-center mb-14">
+        <div className="services  p-5">
+          <img src={map} alt="" className="w-28 object-contain" />
+        </div>
+        <div className="services  p-5">
+          <img src={route} alt="" className="w-28 object-contain" />
+        </div>
+        <div className="services  p-5">
+          <img src={fav} alt="" className="w-28 object-contain" />
+        </div>
+        <div className="services  p-5">
+          <img src={equip} alt="" className="h-28 object-contain  " />
+        </div>
+      </div>
     </div>
   );
 };

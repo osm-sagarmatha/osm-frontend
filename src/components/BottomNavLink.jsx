@@ -8,11 +8,10 @@ const BottomNavLink = ({ icon, link }) => {
       style={({ isActive }) => {
         return {
           backgroundColor: isActive ? "white" : "",
-          color: isActive ? "green" : "",
         };
       }}
       className={({ isActive }) =>
-        `w-full hover:text-green-500 justify-center text-center pt-3 pb-3 ${
+        `w-full hover:text-green-500 justify-center text-center py-3 ${
           isActive ? "bottom-nav-link" : ""
         }`
       }

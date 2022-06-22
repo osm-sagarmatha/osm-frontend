@@ -1,5 +1,4 @@
-import React, { useReducer, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useReducer } from "react";
 import {
   faPersonBiking,
   faPersonRunning,
