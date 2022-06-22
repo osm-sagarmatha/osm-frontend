@@ -94,7 +94,7 @@ const Map = () => {
       center={[lat, long]}
     >
       <ChangeView center={[lat, long]} zoom={14} />
-      <TileLayer url="https://tile.openstreetmap.org/${z}/${x}/${y}.png" />
+      <TileLayer url="https://a.tile.openstreetmap.de/${z}/${x}/${y}.png" />
 
       <Marker position={[lat, long]}>
         <Popup>Source</Popup>
