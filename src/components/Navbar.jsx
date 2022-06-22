@@ -12,25 +12,34 @@ import {
   faArrowRightFromBracket,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, NavLink } from "react-router-dom";
+
+import { useAuthAction } from "../contexts/auth";
+
 const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
-  const toggleCart = () => {
-    setShowSidebar(!showSidebar);
-  };
+
+  const { logout } = useAuthAction();
+
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
+
   return (
-    <div className="nav flex justify-between">
+    <div className="nav flex justify-between mb-10">
       <div>
-        <div className="navbar fixed z-50 p-3 w-10 ">
-          <FontAwesomeIcon onClick={toggleCart} fontSize={30} icon={faBars} />
+        <div className="navbar fixed z-50 p-6 w-10">
+          <FontAwesomeIcon
+            onClick={toggleSidebar}
+            fontSize={30}
+            icon={faBars}
+          />
         </div>
         <nav
-          className={`nav-menu-active bg-green-500 w-52 z-50 h-screen flex   fixed top-0 transform  left-0 transition-transform duration-200  ${
+          className={`nav-menu-active bg-green-500 w-52 z-50 h-screen flex fixed top-0 transform left-0 transition-transform duration-200  ${
             showSidebar
-              ? `left-0  translate-x-0 ease-in`
+              ? `left-0 translate-x-0 ease-in`
               : " bg-blue-500 -translate-x-full ease-out -left-full "
           }`}
         >
-          <ul className="nav-menu-items text-white" onClick={toggleCart}>
+          <ul className="nav-menu-items text-white" onClick={toggleSidebar}>
             <div className=" w-full h-20  ">
               <Link to="#" className="menu-bars fixed left-4 top-5">
                 <FontAwesomeIcon icon={faXmark} fontSize={30} />
@@ -113,25 +122,19 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink
+                <button
                   className="flex items-center absolute bottom-2 px-3 mb-5 rounded-md space-x-2 hover:bg-white hover:text-green-500"
-                  to="/logout"
-                  style={({ isActive }) => {
-                    return {
-                      backgroundColor: isActive ? "white" : "",
-                      color: isActive ? "green" : "",
-                    };
-                  }}
+                  onClick={logout}
                 >
                   <FontAwesomeIcon icon={faArrowRightFromBracket} />
                   <h1>Logout</h1>
-                </NavLink>
+                </button>
               </li>
             </div>
           </ul>
         </nav>
       </div>
-      <div className="flex absolute right-5 top-4 z-50">
+      <div className="flex absolute right-5 top-4 z-50 p-2">
         <GiRunningNinja
           fontSize={30}
           className="text-orange-500 mr-2 font-bold "

@@ -16,7 +16,7 @@ const Profile = () => {
     <div className="md:py-5 py-10 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex justify-center items-center">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
-        <h1 className="text-2xl py-8 px-4 text-green-500  font-bold text-left ">
+        <h1 className="text-2xl py-8 px-4   font-bold text-left ">
           {" "}
           Gaurav Shah
         </h1>

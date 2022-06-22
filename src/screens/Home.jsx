@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Hero from "../images/Hero.png";
-export const Home = () => {
+
+const Home = () => {
   return (
     <div className="md:py-5 flex flex-col mx-auto justify-center   items-center md:bg-white rounded-lg md:w-96">
       <img
@@ -27,3 +28,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

@@ -12,7 +12,7 @@ import BottomNavLink from "./BottomNavLink";
 const NavigationBar = () => {
   return (
     // <!-- component -->
-    <div className="w-full ">
+    <div className="w-full">
       <section
         id="bottom-navigation"
         className="md:w-96 w-full mx-auto fixed inset-x-0 bottom-0 z-10 bg-white shadow"

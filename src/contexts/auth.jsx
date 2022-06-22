@@ -13,9 +13,9 @@ const reducer = (state, action) => {
       return {
         ...state,
         loading: false,
-        token: state.token,
+        token: action.token,
         errors: [],
-        user: state.user,
+        user: action.user,
       };
 
     case "ERROR":
@@ -49,7 +49,7 @@ const AuthProvider = ({ children }) => {
   const register = async ({ name, email, password, age, sex, weight }) => {
     dispatch({ type: "START" });
 
-    const data = await axios.post(
+    const { data } = await axios.post(
       "http://localhost:5000/api/auth/signup",
       { name, email, password, age, sex, weight },
       { headers: { "Content-Type": "application/json" } }
@@ -68,7 +68,7 @@ const AuthProvider = ({ children }) => {
   const login = async ({ email, password }) => {
     dispatch({ type: "START" });
 
-    const data = await axios.post(
+    const { data } = await axios.post(
       "http://localhost:5000/api/auth/login",
       { email, password },
       { headers: { "Content-Type": "application/json" } }
