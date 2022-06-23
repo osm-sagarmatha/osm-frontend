@@ -3,7 +3,7 @@ import React from "react";
 const CreateRoute = () => {
   return (
     <div className="md:py-5 py-3 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
-      <h1 className="text-2xl  px-4  pt-4 w-full text-blue-500 font-bold text-left ">
+      <h1 className="text-2xl  px-4  mt-8 w-full text-blue-500 font-bold text-left ">
         {" "}
         Create Route
       </h1>
@@ -32,7 +32,7 @@ const CreateRoute = () => {
         <p className="mt-10 h-28 text-center mb-40">
           By uploading the route you abide to all the{" "}
           <span className="text-green-500">terms and policies </span> of
-          Firfire.
+          Firfirey.
         </p>
       </div>
     </div>

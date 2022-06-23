@@ -12,7 +12,7 @@ const Achievement = () => {
     <div className="md:py-5 py-3 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex  w-full ml-5">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
-        <div className="text-2xl py-5 px-4   font-bold text-left ">
+        <div className="text-2xl py-10 px-4   font-bold text-left ">
           {" "}
           Gaurav Shah
           <div className="flex justify-between items-center w-full">
@@ -30,13 +30,14 @@ const Achievement = () => {
           </div>
         </div>
       </div>
-
-      <h1 className="text-2xl px-5 text-blue-500 font-bold">Achievements</h1>
-      <div className=" flex flex-col ">
-        <img src={veteran} alt="" />
-        <img src={community} alt="" />
-        <img src={contributer} alt="" />
-        <img src={collector} className="mb-20" alt="" />
+      <div className="-mt-4">
+        <h1 className="text-2xl px-5 text-blue-500 font-bold">Achievements</h1>
+        <div className=" flex flex-col ">
+          <img src={veteran} alt="" />
+          <img src={community} alt="" />
+          <img src={contributer} alt="" />
+          <img src={collector} className="mb-20" alt="" />
+        </div>
       </div>
     </div>
   );

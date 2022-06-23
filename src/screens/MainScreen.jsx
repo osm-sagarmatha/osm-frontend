@@ -2,11 +2,12 @@ import React from "react";
 import image from "../images/Mask group.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShoePrints } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const MainScreen = () => {
   return (
     <div className="main md:py-5 flex flex-col mx-auto  md:bg-white rounded-lg md:w-96">
       <div className="relative  mx-auto">
-        <h1 className="text-2xl pt-12  text-green-500  w-full font-bold  ">
+        <h1 className="text-2xl pt-10  text-green-500  w-full font-bold  ">
           {" "}
           Hi Gaurav
         </h1>{" "}
@@ -25,9 +26,11 @@ const MainScreen = () => {
                 <span className="text-green-500">9</span> km
               </p>
             </div>
-            <button className="bg-green-500 text-white text-sm px-3 mx-auto text-center w-full rounded-md ">
-              Start Hiking
-            </button>
+            <Link to="/route">
+              <button className="bg-green-500 text-white text-sm px-3 mx-auto text-center w-full rounded-md ">
+                Start Hiking
+              </button>
+            </Link>
           </div>
           <div className=" absolute bottom-2 right-2  px-6 py-2 justify-center items-center  bg-white rounded-2xl border border-gray-200 shadow-md  ">
             <div className=" border-b-2 border-gray-100 pb-2 font-bold tracking-tight text-center flex justify-center items-center ">

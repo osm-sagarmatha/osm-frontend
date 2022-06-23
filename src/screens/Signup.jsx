@@ -10,7 +10,7 @@ import { useAuthAction } from "../contexts/auth";
 const reducer = (state, action) => {
   return {
     ...state,
-    [action.name]: [action.value],
+    [action.name]: action.value,
   };
 };
 
@@ -31,9 +31,8 @@ const Signup = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // const { name, email, password, age, weight, sex } = state;
-    // register({ name, email, password, age, weight, sex });
-    register(state);
+    const { name, email, password, age, weight, sex } = state;
+    register({ name, email, password, age, weight, sex });
   };
 
   return (
@@ -135,12 +134,15 @@ const Signup = () => {
             className="text-gray-500 absolute right-3 top-3 cursor-pointer"
           />
         </div>
-        <button className="bg-green-500 rounded-lg h-10 w-80 text-white">
+        <button
+          type="submit"
+          className="bg-green-500 rounded-lg h-10 w-80 text-white"
+        >
           {" "}
           Sign Up{" "}
         </button>
       </form>
-      <h3 className="py-2 mb-2 ">
+      <h3 className="py-2 mb-16 ">
         Already a member?
         <Link className="text-blue-600" to="/login">
           &nbsp;Login

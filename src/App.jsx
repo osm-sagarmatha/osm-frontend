@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          <Navbar />
+          {token && <Navbar />}
           {token ? <AuthRoutes /> : <UnAuthRoutes />}
         </div>
         <NavigationBar />

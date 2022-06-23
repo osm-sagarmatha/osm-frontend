@@ -11,7 +11,7 @@ const Explore = () => {
   return (
     <div className="md:py-5 py-10  mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="border-b-2 px-5 border-gray-200 pb-2">
-        <h1 className="text-blue-500 text-2xl mt-5 mb-2 font-bold">
+        <h1 className="text-blue-500 text-2xl  mb-2 font-bold">
           Discover Routes
         </h1>
         <p>
@@ -19,21 +19,21 @@ const Explore = () => {
           community.
         </p>
       </div>
-      <div className="px-5 py-5 flex justify-between items-center ">
+      <div className="px-5 py-5 flex justify-between bg-white items-center ">
         <img src={ellipse} alt="" className="h-20 mr-4" />
         <div>
           <h1 className="text-black  font-bold">Kira Lin</h1>
           <p>Shivapuri Hills is one of the most popular hiking in Kathmandu.</p>
         </div>
       </div>
-      <div className="flex justify-evenly items-center">
+      <div className="flex justify-evenly bg-white pb-6 items-center">
         <img src={rect} className="h-48" alt="" />
         <div className="space-y-3">
           <img src={rect2} className="h-24" alt="" />
           <img src={rect3} className="h-24" alt="" />
         </div>
       </div>
-      <div className="px-5 py-5 flex justify-between border-b-2 border-gray-200 ">
+      <div className="px-5 py-5 flex bg-white justify-between border-b-2 border-gray-200 ">
         <div className="flex">
           <FontAwesomeIcon icon={faHeart} fontSize={20} />
           <p className="text-black ml-2">420 people liked this</p>

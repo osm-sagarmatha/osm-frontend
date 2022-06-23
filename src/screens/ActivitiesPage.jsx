@@ -9,6 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import ActivityCheckbox from "../components/Activity/ActivityCheckbox";
+import { Link } from "react-router-dom";
 
 const reducer = (state, action) => {
   return {
@@ -76,11 +77,12 @@ const ActivitiesPage = () => {
           name="Cardio"
           icon={faPersonFalling}
         />
-
-        <button className="bg-green-500 rounded-lg h-10 w-80 text-white">
-          {" "}
-          Next{" "}
-        </button>
+        <Link to="/">
+          <button className="bg-green-500 rounded-lg h-10 w-80 text-white mb-20">
+            {" "}
+            Next{" "}
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -9,7 +9,6 @@ import Activities from "./screens/Activities";
 import MainScreen from "./screens/MainScreen";
 import Leaderboards from "./screens/Leaderboards";
 import ActivitiesPage from "./screens/ActivitiesPage";
-import Achievement from "./screens/Achievement";
 
 const AuthRoutes = () => {
   return (
@@ -22,7 +21,7 @@ const AuthRoutes = () => {
       <Route path="/activities" element={<Activities />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/explore" element={<Explore />} />
-      <Route path="/leader" element={<Leaderboards />} />
+      <Route path="/redeem" element={<Leaderboards />} />
       <Route path="/route" element={<RouteInfo />} />
 
       <Route path="*" element={<MainScreen />} />

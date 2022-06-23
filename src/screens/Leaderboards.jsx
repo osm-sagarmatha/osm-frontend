@@ -11,7 +11,7 @@ const Leaderboards = () => {
           Leaderboard
         </h1>
       </div>
-      <div className="">
+      <div className="-mt-4">
         <img src={leader} className="w-96" alt="" />
       </div>
       <div className="px-5 py-5 flex justify-between border-b-2 border-gray-200 items-center ">

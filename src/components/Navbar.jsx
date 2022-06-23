@@ -23,13 +23,14 @@ const Navbar = () => {
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   return (
-    <div className="nav flex justify-between mb-10">
-      <div>
+    <div className="nav flex justify-between mb-10  ">
+      <div className="justify-between w-full fixed z-[1000] bg-white h-[4.5rem] md:bg-transparent">
         <div className="navbar fixed z-50 p-6 w-10">
           <FontAwesomeIcon
             onClick={toggleSidebar}
             fontSize={30}
             icon={faBars}
+            className="cursor-pointer"
           />
         </div>
         <nav
@@ -79,7 +80,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   className="flex items-center  px-3 mb-5 rounded-md space-x-2 hover:bg-white hover:text-green-500"
-                  to="/activity"
+                  to="/activities"
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "white" : "",
@@ -94,7 +95,7 @@ const Navbar = () => {
               <li>
                 <NavLink
                   className="flex items-center  px-3 mb-5 rounded-md space-x-2 hover:bg-white hover:text-green-500"
-                  to="/clubs"
+                  to="/community"
                   style={({ isActive }) => {
                     return {
                       backgroundColor: isActive ? "white" : "",
@@ -134,13 +135,13 @@ const Navbar = () => {
           </ul>
         </nav>
       </div>
-      <div className="flex absolute right-5 top-4 z-50 p-2">
+      <Link to="/redeem" className="flex fixed right-5 top-4 z-[1000] p-2">
         <GiRunningNinja
           fontSize={30}
           className="text-orange-500 mr-2 font-bold "
         />
         <h2 className="text-orange-500 font-bold  ">6969</h2>
-      </div>
+      </Link>
     </div>
   );
 };

@@ -21,7 +21,7 @@ const NavigationBar = () => {
           <BottomNavLink link="/" icon={faHouse} />
           <BottomNavLink link="/activities" icon={faHeart} />
           <BottomNavLink link="/explore" icon={faCompass} />
-          <BottomNavLink link="/chat" icon={faComments} />
+          <BottomNavLink link="/community" icon={faComments} />
           <BottomNavLink link="/profile" icon={faUser} />
         </div>
       </section>

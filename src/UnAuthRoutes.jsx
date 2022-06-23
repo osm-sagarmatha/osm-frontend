@@ -17,13 +17,18 @@ const UnAuthRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/map" element={<Map />} />
+
+      <Route path="*" element={<Home />} />
+      {/* <Route path="/map" element={<Map />} />
       <Route path="*" element={<Home />} />
       <Route path="/friend-list" element={<FriendList />} />
       <Route path="/achievements" element={<Achievement />} />
       <Route path="/challenges" element={<Challenges />} />
       <Route path="/community" element={<Community />} />
-      <Route path="/create-route" element={<CreateRoute />} />
+      <Route path="/create-route" element={<CreateRoute />} /> */}
+
+      {/* Auth
+       */}
     </Routes>
   );
 };

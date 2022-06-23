@@ -17,10 +17,11 @@ import map from "../images/Map.png";
 import route from "../images/route.png";
 import equip from "../images/equip.png";
 import fav from "../images/fav.png";
+import { Link } from "react-router-dom";
 const Activities = () => {
   return (
     <div className="md:py-5 flex flex-col mx-auto items-left md:bg-white rounded-lg md:w-96">
-      <h1 className="text-2xl px-12 py-8 text-blue-500  font-bold text-left ">
+      <h1 className="text-2xl px-8 py-10 text-blue-500  font-bold text-left ">
         {" "}
         Gaurav's Activity
       </h1>
@@ -47,15 +48,15 @@ const Activities = () => {
         </div>
       </div>
       <div className="servies flex flex-wrap justify-center mb-14">
-        <div className="services  p-5">
+        <Link to="/map" className="services  p-5">
           <img src={map} alt="" className="w-28 object-contain" />
-        </div>
-        <div className="services  p-5">
+        </Link>
+        <Link to="/route" className="services  p-5">
           <img src={route} alt="" className="w-28 object-contain" />
-        </div>
-        <div className="services  p-5">
+        </Link>
+        <Link to="/challenges" className="services  p-5">
           <img src={fav} alt="" className="w-28 object-contain" />
-        </div>
+        </Link>
         <div className="services  p-5">
           <img src={equip} alt="" className="h-28 object-contain  " />
         </div>

@@ -11,16 +11,20 @@ import {
   faGear,
 } from "@fortawesome/free-solid-svg-icons";
 import { BsShieldFillCheck } from "react-icons/bs";
+import { Link } from "react-router-dom";
 const Profile = () => {
   return (
     <div className="md:py-5 py-10 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex justify-center items-center">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
-        <h1 className="text-2xl py-8 px-4   font-bold text-left ">
+        <h1 className="text-2xl py-5 px-4   font-bold text-left ">
           {" "}
           Gaurav Shah
         </h1>
-        <button type="button" className="bg-green-500 px-4 text-md text-white">
+        <button
+          type="button"
+          className="bg-green-500 px-4 py-1 text-sm text-white rounded-md"
+        >
           Edit
         </button>
       </div>
@@ -60,7 +64,7 @@ const Profile = () => {
             <h2 className="px-3 py-5 w-full">Personal Data</h2>
             <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
-          <div className="flex justify-center items-center">
+          <Link to="/achievements" className="flex justify-center items-center">
             <FontAwesomeIcon
               icon={faTrophy}
               fontSize={20}
@@ -68,7 +72,7 @@ const Profile = () => {
             />
             <h2 className="px-3 py-5 w-full">Achievements</h2>
             <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
-          </div>
+          </Link>
           <div className="flex justify-center items-center">
             <FontAwesomeIcon
               icon={faClockRotateLeft}
@@ -78,7 +82,7 @@ const Profile = () => {
             <h2 className="px-3 py-5 w-full ">History</h2>
             <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
           </div>
-          <div className="flex justify-center items-center">
+          <Link to="/friend-list" className="flex justify-center items-center">
             <FontAwesomeIcon
               icon={faUserGroup}
               fontSize={20}
@@ -86,7 +90,7 @@ const Profile = () => {
             />
             <h2 className="px-3 py-5 w-full">Friends</h2>
             <FontAwesomeIcon icon={faGreaterThan} className="text-gray-400" />
-          </div>
+          </Link>
         </div>
       </div>
       <div className="flex flex-col mx-auto mt-3">
@@ -119,7 +123,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col mx-auto mt-3 h-80">
+      <div className="flex flex-col mx-auto mt-3 mb-10 ">
         <div className="block p-6 w-80 bg-white rounded-lg border border-gray-200 shadow-md  ">
           <h5 className="mb-2 text-2xl font-bold tracking-tight ">Other</h5>
           <div className="flex justify-center items-center mb-3">
@@ -128,7 +132,7 @@ const Profile = () => {
               Privacy
             </div>
           </div>
-          <div className="flex justify-center items-center mb-3 ">
+          <div className="flex justify-center items-center  ">
             <FontAwesomeIcon
               icon={faGear}
               fontSize={20}
