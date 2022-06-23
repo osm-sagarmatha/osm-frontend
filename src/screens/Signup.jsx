@@ -43,7 +43,7 @@ const Signup = () => {
         alt="Home"
       />
       <h1 className="text-4xl text-blue-600 font-bold">Hello Again</h1>
-      <h3 className="p-4 text-center w-full">Join MugFit</h3>
+      <h3 className="p-4 text-center w-full">Join Firfirey</h3>
       <form onSubmit={onSubmit}>
         <div className="login_name">
           <input

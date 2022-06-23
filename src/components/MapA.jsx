@@ -62,8 +62,6 @@ const MapA = ({ coords, routes, setRoutes }) => {
 
   return (
     <>
-      <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-
       <Marker position={[coords.lat, coords.long]}>
         <Popup>Source</Popup>
       </Marker>

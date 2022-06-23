@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { MapContainer } from "react-leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 
 import { length } from "@turf/turf";
 
 import MapA from "./MapA";
 import Map2 from "./Map2";
 import { useLocation } from "react-router-dom";
+
 const distance = (routes) => {
   let data = 0;
   for (const route of routes) {
@@ -15,6 +16,8 @@ const distance = (routes) => {
 };
 
 const Map = () => {
+  const location = useLocation();
+
   const [lat, setLat] = useState(Number);
   const [long, setLong] = useState(Number);
 
@@ -24,9 +27,9 @@ const Map = () => {
   const [routes, setRoutes] = useState([]);
 
   const [shivapuri, showShivaPuri] = useState(false);
-  const location = useLocation();
+
   let locate = location.pathname.startsWith("/map");
-  console.log(locate);
+
   return (
     <>
       <div
@@ -49,9 +52,12 @@ const Map = () => {
         </div>
       )}
 
-      {shivapuri && (
-        <MapContainer doubleClickZoom={false} zoom={14} center={[lat, long]}>
+      <MapContainer doubleClickZoom={false} zoom={14} center={[lat, long]}>
+        <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+        {shivapuri ? (
           <MapA
+            key={"firest"}
             routes={routes}
             setRoutes={setRoutes}
             coords={{
@@ -65,9 +71,10 @@ const Map = () => {
               setDestLong,
             }}
           />
-        </MapContainer>
-      )}
-      {!shivapuri && <Map2 />}
+        ) : (
+          <Map2 key={"another"} />
+        )}
+      </MapContainer>
     </>
   );
 };

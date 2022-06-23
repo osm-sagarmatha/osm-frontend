@@ -4,9 +4,10 @@ const useLocation = () => {
   const [lat, setLat] = useState(Number);
   const [long, setLong] = useState(Number);
   useEffect(() => {
+    let watch;
     function getLocation() {
       if (navigator.geolocation) {
-        let watch = navigator.geolocation.watchPosition(showPosition, error, {
+        watch = navigator.geolocation.watchPosition(showPosition, error, {
           enableHighAccuracy: false,
         });
         // console.log("watchid", watchid);
@@ -24,6 +25,8 @@ const useLocation = () => {
     }
 
     getLocation();
+
+    return () => watch && navigator.geolocation.clearWatch(watch);
   }, [long, lat]);
   return [long, lat];
 };
