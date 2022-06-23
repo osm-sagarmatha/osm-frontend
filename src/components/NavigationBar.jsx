@@ -15,7 +15,7 @@ const NavigationBar = () => {
     <div className="w-full">
       <section
         id="bottom-navigation"
-        className="md:w-96 w-full mx-auto fixed inset-x-0 bottom-0 z-10 bg-white shadow"
+        className="md:w-96 w-full mx-auto fixed inset-x-0 bottom-0 z-[999] bg-white shadow"
       >
         <div id="tabs" className="flex justify-between">
           <BottomNavLink link="/" icon={faHouse} />

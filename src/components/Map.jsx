@@ -14,10 +14,10 @@ const Map = () => {
 
   return (
     <>
-      <div className="absolute w-{1/2} p-5 flex justify-center bg-white z-[500] top-0 right-0 drop-shadow rounded">
+      <div className="  p-5 flex justify-center  z-[500] top-0 right-17 drop-shadow rounded">
         <button
           onClick={() => showShivaPuri(true)}
-          className="w-auto bg-green-500 px-2 py-2 rounded text-white"
+          className="mx-auto bg-green-500 px-2 py-2  rounded text-white"
         >
           Mock Shivapuri
         </button>
