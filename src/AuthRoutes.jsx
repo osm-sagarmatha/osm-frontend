@@ -9,7 +9,13 @@ import Activities from "./screens/Activities";
 import MainScreen from "./screens/MainScreen";
 import Leaderboards from "./screens/Leaderboards";
 import ActivitiesPage from "./screens/ActivitiesPage";
-
+import FriendList from "./screens/FriendList";
+import Achievement from "./screens/Achievement";
+import Challenges from "./screens/Challenges";
+import Community from "./screens/Community";
+import CreateRoute from "./screens/CreateRoute";
+import Home from "./screens/Home";
+import Map2 from "./components/Map2";
 const AuthRoutes = () => {
   return (
     <Routes>
@@ -23,6 +29,13 @@ const AuthRoutes = () => {
       <Route path="/explore" element={<Explore />} />
       <Route path="/redeem" element={<Leaderboards />} />
       <Route path="/route" element={<RouteInfo />} />
+      <Route path="/map2" element={<Map2 />} />
+      <Route path="*" element={<Home />} />
+      <Route path="/friend-list" element={<FriendList />} />
+      <Route path="/achievements" element={<Achievement />} />
+      <Route path="/challenges" element={<Challenges />} />
+      <Route path="/community" element={<Community />} />
+      <Route path="/create-route" element={<CreateRoute />} />
 
       <Route path="*" element={<MainScreen />} />
     </Routes>
