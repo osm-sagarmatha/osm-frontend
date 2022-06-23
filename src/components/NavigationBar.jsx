@@ -7,10 +7,14 @@ import {
   faCompass,
 } from "@fortawesome/free-solid-svg-icons";
 
+import { useLocation } from "react-router-dom";
+
 import BottomNavLink from "./BottomNavLink";
 
 const NavigationBar = () => {
-  return (
+  const location = useLocation();
+
+  return location.pathname.startsWith("/map") ? null : (
     // <!-- component -->
     <div className="w-full">
       <section

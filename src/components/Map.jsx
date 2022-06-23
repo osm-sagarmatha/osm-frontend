@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { MapContainer } from "react-leaflet";
 
+import { length } from "@turf/turf";
+
 import MapA from "./MapA";
+import Map2 from "./Map2";
+import { useLocation } from "react-router-dom";
 const distance = (routes) => {
   let data = 0;
   for (const route of routes) {
@@ -17,24 +21,39 @@ const Map = () => {
   const [destLat, setDestLat] = useState(Number);
   const [destLong, setDestLong] = useState(Number);
 
-  const [shivapuri, showShivaPuri] = useState(false);
+  const [routes, setRoutes] = useState([]);
 
+  const [shivapuri, showShivaPuri] = useState(false);
+  const location = useLocation();
+  let locate = location.pathname.startsWith("/map");
+  console.log(locate);
   return (
     <>
-      <div className="  p-5 flex justify-center  z-[500] top-0 right-17 drop-shadow rounded">
+      <div
+        className={`p-5 flex justify-center ${
+          locate ? "absolute left-[50%] translate-x-[-50%]" : ""
+        } z-[500]  drop-shadow rounded`}
+      >
         <button
-          onClick={() => showShivaPuri(true)}
-          className="w-auto bg-green-500 px-2 py-1 rounded text-white"
+          onClick={() => showShivaPuri(!shivapuri)}
+          className=" bg-green-500 px-2 py-1 rounded text-white"
         >
-          Mock Shivapuri
+          {!shivapuri ? "Teleport Shivapuri" : "Take me back"}
         </button>
       </div>
-      <div className="absolute w-[80%] p-5 flex justify-center bg-white z-[500] bottom-10 left-[50%] translate-x-[-50%] drop-shadow-2xl rounded-lg">
-        Hello I hiked {distance(routes)}kms in {distance(routes) / 3.5}hour
-      </div>
+
+      {shivapuri && (
+        <div className="absolute w-80 p-4 flex justify-center bg-white z-[500] bottom-14 left-[50%] translate-x-[-50%] drop-shadow-2xl rounded-lg">
+          Hiking: {distance(routes).toFixed(1)} kms in{" "}
+          {(distance(routes) / 3.5).toFixed(1)} hour
+        </div>
+      )}
+
       {shivapuri && (
         <MapContainer doubleClickZoom={false} zoom={14} center={[lat, long]}>
           <MapA
+            routes={routes}
+            setRoutes={setRoutes}
             coords={{
               lat,
               long,
@@ -48,6 +67,7 @@ const Map = () => {
           />
         </MapContainer>
       )}
+      {!shivapuri && <Map2 />}
     </>
   );
 };

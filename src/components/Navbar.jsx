@@ -10,19 +10,22 @@ import {
   faComments,
   faGift,
   faArrowRightFromBracket,
+  faFan,
 } from "@fortawesome/free-solid-svg-icons";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import { useAuthAction } from "../contexts/auth";
 
 const Navbar = () => {
+  const location = useLocation();
+
   const [showSidebar, setShowSidebar] = useState(false);
 
   const { logout } = useAuthAction();
 
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
-  return (
+  return location.pathname.startsWith("/map") ? null : (
     <div className="nav flex justify-between mb-10  ">
       <div className="justify-between w-full fixed z-[1000] bg-white h-[4.5rem] md:bg-transparent">
         <div className="navbar fixed z-50 p-6 w-10">
@@ -136,7 +139,8 @@ const Navbar = () => {
         </nav>
       </div>
       <Link to="/redeem" className="flex fixed right-5 top-4 z-[1000] p-2">
-        <GiRunningNinja
+        <FontAwesomeIcon
+          icon={faFan}
           fontSize={30}
           className="text-orange-500 mr-2 font-bold "
         />

@@ -3,13 +3,15 @@ import image from "../images/Mask group.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faShoePrints } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useAuthState } from "../contexts/auth";
 const MainScreen = () => {
+  const state = useAuthState();
   return (
     <div className="main md:py-5 flex flex-col mx-auto  md:bg-white rounded-lg md:w-96">
       <div className="relative  mx-auto">
         <h1 className="text-2xl pt-10  text-green-500  w-full font-bold  ">
           {" "}
-          Hi Gaurav
+          Hi {state.user.name}
         </h1>{" "}
         <h2 className="text-gray-500  py-1  w-full">June 21, 2022</h2>
         <img src={image} alt="image" className="h-72 object-contain" />

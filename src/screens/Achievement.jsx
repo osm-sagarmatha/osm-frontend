@@ -6,15 +6,18 @@ import contributer from "../images/contributor.png";
 import community from "../images/community.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAward } from "@fortawesome/free-solid-svg-icons";
+import { useAuthState } from "../contexts/auth";
 
 const Achievement = () => {
+  const state = useAuthState();
+
   return (
     <div className="md:py-5 py-3 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex  w-full ml-5">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
         <div className="text-2xl py-10 px-4   font-bold text-left ">
           {" "}
-          Gaurav Shah
+          {state.user.name}
           <div className="flex justify-between items-center w-full">
             <div className="flex justify-center items-center">
               <FontAwesomeIcon

@@ -33,7 +33,7 @@ const AuthRoutes = () => {
       <Route path="/route" element={<RouteInfo />} />
       <Route path="/map2" element={<Map2 />} />
       <Route path="/map" element={<Map />} />
-      <Route path="*" element={<Home />} />
+      {/* <Route path="*" element={<Home />} /> */}
       <Route path="/friend-list" element={<FriendList />} />
       <Route path="/achievements" element={<Achievement />} />
       <Route path="/challenges" element={<Challenges />} />
