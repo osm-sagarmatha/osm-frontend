@@ -10,12 +10,12 @@ const createRoutineMachineLayer = (props) => {
       "5b3ce3597851110001cf6248fde94a42cd234a078def0569f083f0ec",
       { profile: "foot-hiking" }
     ),
-    waypoints: [L.latLng(27.7142, 85.3145), L.latLng(27.7142, 85.3185)],
+    waypoints: [L.latLng(57.74, 11.94), L.latLng(57.6792, 11.949)],
     // lineOptions: {
     //   styles: [{ color: "#6FA1EC", weight: 4 }],
     // },
     urlParameters: {
-      profile: "foot-walking",
+      profile: "foot-hiking",
     },
     showAlternatives: true,
   });
