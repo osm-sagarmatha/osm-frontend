@@ -4,7 +4,7 @@ const Challenges = () => {
   return (
     <div className="md:py-5 py-3 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex flex-col space-y-2 w-full justify-center items-center">
-        <h1 className="text-2xl  px-4  pt-4 w-full text-blue-500 font-bold text-left ">
+        <h1 className="text-2xl  px-4  mt-8 w-full text-blue-500 font-bold text-left ">
           {" "}
           Challenges
         </h1>
