@@ -4,9 +4,9 @@ import { TileLayer, useMap, Marker, Popup, GeoJSON } from "react-leaflet";
 import shivapuri from "./shivapuri.json";
 import bufferFeatureIntersection from "../utils/buffer-feature-intersection";
 
-const MapA = ({ coords }) => {
+const MapA = ({ coords, routes, setRoutes }) => {
   const map = useMap();
-  const [routes, setRoutes] = useState([]);
+  // const [routes, setRoutes] = useState([]);
 
   const markerRef = useRef(null);
   const eventHandlers = useMemo(

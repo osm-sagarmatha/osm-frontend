@@ -12,14 +12,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { BsShieldFillCheck } from "react-icons/bs";
 import { Link } from "react-router-dom";
+
+import { useAuthState } from "../contexts/auth";
+
 const Profile = () => {
+  const state = useAuthState();
+
   return (
     <div className="md:py-5 py-10 px-5 mx-auto md:bg-white md:w-96 flex flex-col">
       <div className="flex justify-center items-center">
         <img src={userImg} className=" object-contain w-16" alt="userImage" />
-        <h1 className="text-2xl py-5 px-4   font-bold text-left ">
+        <h1 className="text-2xl py-5 px-4 font-bold text-left ">
           {" "}
-          Gaurav Shah
+          {state.user.name}
         </h1>
         <button
           type="button"
@@ -29,17 +34,17 @@ const Profile = () => {
         </button>
       </div>
       <div className="flex justify-center space-x-4">
-        <div className="block px-6 py-2 justify-center items-center bg-white rounded-2xl border border-gray-200 shadow-md hover:bg-gray-100 ">
+        {/* <div className="block px-6 py-2 justify-center items-center bg-white rounded-2xl border border-gray-200 shadow-md hover:bg-gray-100 ">
           <h5 className=" text-lg font-bold tracking-tight text-center ">
             172cm
           </h5>
           <p className="font-normal  text-sm text-gray-400 text-center">
             Height
           </p>
-        </div>
+        </div> */}
         <div className="block px-6 py-2 justify-center items-center bg-white rounded-2xl border border-gray-200 shadow-md hover:bg-gray-100 ">
           <h5 className=" text-lg font-bold tracking-tight text-center ">
-            70kg
+            {state.user.weight}kg
           </h5>
           <p className="font-normal  text-sm text-gray-400 text-center">
             Weight
@@ -47,7 +52,7 @@ const Profile = () => {
         </div>
         <div className="block px-6 py-2 justify-center items-center bg-white rounded-2xl border border-gray-200 shadow-md hover:bg-gray-100 ">
           <h5 className=" text-lg font-bold tracking-tight text-center ">
-            23 yrs
+            {state.user.age} yrs
           </h5>
           <p className="font-normal  text-sm text-gray-400 text-center">Age</p>
         </div>
