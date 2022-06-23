@@ -15,10 +15,10 @@ function App() {
     <div className="App">
       <Router>
         <div>
-          {token && <Navbar />}
+          {!window.location.href.includes("map") && token && <Navbar />}
           {token ? <AuthRoutes /> : <UnAuthRoutes />}
         </div>
-        <NavigationBar />
+        {!window.location.href.includes("map") && <NavigationBar />}
       </Router>
     </div>
   );

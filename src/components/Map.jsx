@@ -1,28 +1,7 @@
-import {
-  buffer,
-  point,
-  lineString,
-  intersect,
-  lineIntersect,
-  lineToPolygon,
-} from "@turf/turf";
-import React, { useEffect, useState, useRef } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  useMap,
-  Marker,
-  Popup,
-  GeoJSON,
-  LayerGroup,
-  Polygon,
-  Polyline,
-} from "react-leaflet";
-// import "leaflet-draw";
+import React, { useState } from "react";
+import { MapContainer } from "react-leaflet";
 
 import MapA from "./MapA";
-
-import shivapuri from "./shivapuri.json";
 
 const Map = () => {
   const [lat, setLat] = useState(Number);
@@ -31,21 +10,36 @@ const Map = () => {
   const [destLat, setDestLat] = useState(Number);
   const [destLong, setDestLong] = useState(Number);
 
+  const [shivapuri, showShivaPuri] = useState(false);
+
   return (
-    <MapContainer doubleClickZoom={false} zoom={14} center={[lat, long]}>
-      <MapA
-        coords={{
-          lat,
-          long,
-          setLat,
-          setLong,
-          destLat,
-          destLong,
-          setDestLat,
-          setDestLong,
-        }}
-      />
-    </MapContainer>
+    <>
+      <div className="absolute w-{1/2} p-5 flex justify-center bg-white z-[500] top-0 right-0 drop-shadow rounded">
+        <button
+          onClick={() => showShivaPuri(true)}
+          className="w-auto bg-green-500 px-2 py-2 rounded text-white"
+        >
+          Mock Shivapuri
+        </button>
+      </div>
+
+      {shivapuri && (
+        <MapContainer doubleClickZoom={false} zoom={14} center={[lat, long]}>
+          <MapA
+            coords={{
+              lat,
+              long,
+              setLat,
+              setLong,
+              destLat,
+              destLong,
+              setDestLat,
+              setDestLong,
+            }}
+          />
+        </MapContainer>
+      )}
+    </>
   );
 };
 

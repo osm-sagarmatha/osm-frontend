@@ -1,16 +1,8 @@
-import hash from "object-hash";
 import React, { useEffect, useState, useMemo, useRef } from "react";
 import { TileLayer, useMap, Marker, Popup, GeoJSON } from "react-leaflet";
 
 import shivapuri from "./shivapuri.json";
-
 import bufferFeatureIntersection from "../utils/buffer-feature-intersection";
-
-function ChangeView({ center, zoom }) {
-  const map = useMap();
-  map.setView(center, zoom);
-  return null;
-}
 
 const MapA = ({ coords }) => {
   const map = useMap();
@@ -59,8 +51,8 @@ const MapA = ({ coords }) => {
       coords.setLong(85.38254499435426);
       coords.setLat(27.78337247586879);
 
-      coords.setDestLong(85.3856463);
-      coords.setDestLat(27.7864902);
+      coords.setDestLong(85.37621498107912);
+      coords.setDestLat(27.810003698138686);
 
       //   27.78337247586879, 85.38254499435426
     }
@@ -94,7 +86,7 @@ const MapA = ({ coords }) => {
           <GeoJSON
             key={Math.random().toString()}
             data={route}
-            style={{ color: "red" }}
+            style={{ color: "green" }}
           />
         );
       })}

@@ -108,3 +108,51 @@ function checkIntersect(feature, buf) {
 
   return intersect(lineToPolygon(str), buf);
 }
+
+/**
+ *
+ *
+ *
+ *
+ */
+
+function findFeatureIntersection(featureCollection) {
+  let data = [];
+  for (let i = 0; i < featureCollection.features.length; i++) {
+    let feature1 = featureCollection.features[i];
+
+    data[i] = [];
+
+    for (let j = i + 1; j < featureCollection.features.length; j++) {
+      let feature2 = featureCollection.features[j];
+
+      const points = lineIntersect(feature1, feature2);
+
+      if (points.features.length > 0) data[i].push(j);
+    }
+  }
+
+  return data;
+}
+
+function getRoute(coords, featureCollection) {
+  const dBuf = buffer(point([coords.destLong, coords.destLat]), 100, {
+    units: "meters",
+  });
+  const sBuf = buffer(point([coords.long, coords.lat]), 100, {
+    units: "meters",
+  });
+
+  const data = findFeatureIntersection(featureCollection);
+
+  let starts = [];
+  let dests = [];
+
+  for (let i = 0; i < featureCollection.features.length; i++) {
+    const feature = featureCollection.features[i];
+    if (checkIntersect(feature, dBuf)) starts.push(i);
+    if (checkIntersect(feature, sBuf)) dests.push(i);
+  }
+
+  // return data.map(d => )
+}
