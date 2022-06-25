@@ -13,7 +13,7 @@ const MainScreen = () => {
           {" "}
           Hi {state.user.name}
         </h1>{" "}
-        <h2 className="text-gray-500  py-1  w-full">June 21, 2022</h2>
+        <h2 className="text-gray-500  py-1  w-full">June 24, 2022</h2>
         <img src={image} alt="image" className="h-72 object-contain" />
         <div className="flex justify-between items-center">
           <div className=" absolute bottom-4 left-2  px-3 py-2 justify-center items-center  bg-white rounded-2xl border border-gray-200 shadow-md  ">
@@ -74,7 +74,7 @@ const MainScreen = () => {
           </h5>
           <div className="flex justify-between mb-1">
             <p className="font-normal  text-sm text-gray-400 ">
-              June 21, 2022 | 6:00 AM
+              June 24, 2022 | 6:00 AM
             </p>
           </div>
           <button className="bg-green-500 text-white text-sm px-3 py-1 text-center  rounded-md ">
@@ -83,11 +83,11 @@ const MainScreen = () => {
         </div>
         <div className="px-5 py-2 mx-6 mb-20 justify-center items-center  bg-white rounded-2xl border border-gray-200 shadow-md  ">
           <h5 className=" text-lg font-bold tracking-tight  ">
-            Hiking behind the Hill.
+            Hiking in front of Hill.
           </h5>
           <div className="flex justify-between mb-1">
             <p className="font-normal  text-sm text-gray-400 ">
-              June 21, 2022 | 6:00 AM
+              June 24, 2022 | 6:00 AM
             </p>
           </div>
           <button className="bg-green-500 text-white text-sm px-3 py-1 text-center  rounded-md ">

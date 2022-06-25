@@ -18,12 +18,15 @@ import route from "../images/route.png";
 import equip from "../images/equip.png";
 import fav from "../images/fav.png";
 import { Link } from "react-router-dom";
+import { useAuthState } from "../contexts/auth";
 const Activities = () => {
+  const state = useAuthState();
+
   return (
     <div className="md:py-5 flex flex-col mx-auto items-left md:bg-white rounded-lg md:w-96">
       <h1 className="text-2xl px-8 py-10 text-blue-500  font-bold text-left ">
         {" "}
-        Gaurav's Activity
+        {state.user.name}'s Activity
       </h1>
       <img src={chart} className="w-72 mx-auto" alt="" />
       <div className="activites">

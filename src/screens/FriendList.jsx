@@ -34,7 +34,7 @@ const FriendList = () => {
                 fontSize={30}
                 className="text-orange-500  font-bold "
               />
-              <h2 className="text-orange-500 font-bold  ">6969</h2>
+              <h2 className="text-orange-500 font-bold  ">6000</h2>
             </div>
           </div>
           <div className="mt-5 rounded-lg px-5 py-5 flex justify-between border-b-2 bg-white border-gray-200 items-center ">
@@ -50,7 +50,7 @@ const FriendList = () => {
                 fontSize={30}
                 className="text-orange-500  font-bold "
               />
-              <h2 className="text-orange-500 font-bold  ">6969</h2>
+              <h2 className="text-orange-500 font-bold  ">6000</h2>
             </div>
           </div>
           <div className="mt-5 rounded-lg px-5 py-5 flex justify-between border-b-2 bg-white border-gray-200 items-center ">
@@ -66,7 +66,7 @@ const FriendList = () => {
                 fontSize={30}
                 className="text-orange-500  font-bold "
               />
-              <h2 className="text-orange-500 font-bold  ">6969</h2>
+              <h2 className="text-orange-500 font-bold  ">6000</h2>
             </div>
           </div>
         </div>

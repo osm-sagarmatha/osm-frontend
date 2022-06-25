@@ -10,7 +10,7 @@ const CreateRoute = () => {
       <div className="w-full mx-auto flex flex-col space-y-3 items-center justify-center mt-5">
         <input
           type={"text"}
-          placeholder="Start Destination"
+          placeholder="Start Location"
           className="px-3 w-11/12 rounded-lg "
         />
         <input

@@ -144,7 +144,7 @@ const Navbar = () => {
           fontSize={30}
           className="text-orange-500 mr-2 font-bold "
         />
-        <h2 className="text-orange-500 font-bold  ">6969</h2>
+        <h2 className="text-orange-500 font-bold  ">6000</h2>
       </Link>
     </div>
   );

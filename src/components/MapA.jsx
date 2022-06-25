@@ -77,7 +77,7 @@ const MapA = ({ coords, routes, setRoutes }) => {
         </Popup>
       </Marker>
 
-      <GeoJSON data={shivapuri} />
+      {/* <GeoJSON data={shivapuri} /> */}
 
       {routes.map((route) => {
         return (

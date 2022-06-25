@@ -7,7 +7,7 @@ const Community = () => {
       <div className="flex flex-col space-y-2 w-full justify-center items-center">
         <h1 className="text-2xl  px-4  mt-8 w-full text-blue-500 font-bold text-left ">
           {" "}
-          Challenges
+          Community
         </h1>
 
         <Link

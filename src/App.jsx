@@ -18,7 +18,7 @@ function App() {
           {token && <Navbar />}
           {token ? <AuthRoutes /> : <UnAuthRoutes />}
         </div>
-        <NavigationBar />
+        {token && <NavigationBar />}
       </Router>
     </div>
   );

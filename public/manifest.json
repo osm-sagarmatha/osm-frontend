@@ -1,6 +1,11 @@
 {
   "short_name": "Firfirey",
   "name": "Firfirey",
+  "start_url": ".",
+  "scope":".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
   "icons": [
     {
       "src": "favicon-16x16.png",
@@ -29,10 +34,7 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "scope":".",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  ]
+
+
 }

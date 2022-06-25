@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Home from "./screens/Home";
 import Map2 from "./components/Map2";
@@ -22,6 +22,8 @@ const UnAuthRoutes = () => {
 
       {/* Auth
        */}
+
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

@@ -14,8 +14,7 @@ const Home = () => {
         Welcome to Firfirey
       </h1>
       <h3 className="p-4 w-full ">
-        Leverage agile frameworks to provide a robust synopsis for high level
-        overview. This is the dummy text, I need to learn copywriting.
+        Find the best possible routes personalized for you without any limits.
       </h3>
       <Link to={"/signup"}>
         <button className="bg-green-500   rounded-lg h-10  w-80 text-white">

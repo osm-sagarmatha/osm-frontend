@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import Map from "./components/Map";
 import Profile from "./screens/Profile";
@@ -41,7 +41,7 @@ const AuthRoutes = () => {
       <Route path="/create-route" element={<CreateRoute />} />
       <Route path="/hiking" element={<Hiking />} />
 
-      <Route path="*" element={<MainScreen />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 };

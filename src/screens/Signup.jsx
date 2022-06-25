@@ -42,8 +42,8 @@ const Signup = () => {
         className="md:w-96 w-11/12 relative bottom-4 md:bottom-0 object-contain h-1/2 md:h-full"
         alt="Home"
       />
-      <h1 className="text-4xl text-blue-600 font-bold">Hello Again</h1>
-      <h3 className="p-4 text-center w-full">Join Firfirey</h3>
+      <h1 className="text-4xl text-blue-600 font-bold">Join Firfirey</h1>
+      <h3 className="p-4 text-center w-full"></h3>
       <form onSubmit={onSubmit}>
         <div className="login_name">
           <input
